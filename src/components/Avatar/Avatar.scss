@@ -1,0 +1,11 @@
+.avatar {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    object-position: 0 -35px;
+}
