@@ -1,0 +1,33 @@
+.header {
+    $horizontal-padding: 20px;
+    background-color: #1b1a1a;
+
+    position: fixed;
+    color: white;
+    width: calc(100% - $horizontal-padding * 2);
+    height: 50px;
+    padding: 0 $horizontal-padding;
+
+    font-size: 20px;
+
+    @keyframes HeaderAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    animation: HeaderAnimation 0.75s;
+
+    nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

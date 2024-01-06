@@ -17,7 +17,7 @@
         }
 
         @mixin animateByOrder ($order) {
-            animation: fadeIn $animation-time;
+            animation: IntroductionAnimation $animation-time;
             animation-fill-mode: both;
             animation-delay: calc($animation-time * $order);
         }
@@ -25,7 +25,7 @@
         .greeting {
             font-size: 20px;
             
-            @keyframes fadeIn {
+            @keyframes IntroductionAnimation {
                 0% {
                     opacity: 0;
                     transform: translateY(20px);
@@ -65,10 +65,6 @@
             margin: 16px 0;
             font-size: 32px;
             @include animateByOrder(4);
-
-            a {
-                color: white;
-            }
         }
     }
 }

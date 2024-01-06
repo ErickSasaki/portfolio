@@ -4,7 +4,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
 
 function Introduction() {
   return (
-    <div className='introduction'>
+    <div id='introduction' className='introduction'>
       <Avatar></Avatar>
 
       <div className='introduction-wrapper'>

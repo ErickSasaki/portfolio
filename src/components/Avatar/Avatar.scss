@@ -3,6 +3,13 @@
     width: 350px;
     border-radius: 50%;
     overflow: hidden;
+
+    @keyframes AvatarAnimation {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    animation: AvatarAnimation 0.75s;
 }
 
 .avatar img {
