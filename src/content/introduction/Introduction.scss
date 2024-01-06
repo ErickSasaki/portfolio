@@ -56,5 +56,19 @@
             animation-delay: calc($animation-time * 2);
             animation-fill-mode: both;
         }
+
+        .icons {
+            display: flex;
+            gap: 12px;
+            margin: 16px 0;
+            font-size: 32px;
+            animation: fadeIn $animation-time;
+            animation-delay: calc($animation-time * 3);
+            animation-fill-mode: both;
+
+            a {
+                color: white;
+            }
+        }
     }
 }
