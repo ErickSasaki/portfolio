@@ -1,13 +1,13 @@
 import Avatar from '../../components/Avatar/Avatar';
-import './Header.scss';
+import './Introduction.scss';
 
-function Header() {
+function Introduction() {
   return (
-    <header className='header'>
+    <div className='introduction'>
       <Avatar></Avatar>
 
       <div className='introduction-wrapper'>
-        <p className='introduction animate'>
+        <p className='greeting animate'>
           Hi, I'm
         </p>
 
@@ -15,8 +15,8 @@ function Header() {
 
         <p className='title animate'> I'm a Front end Developer who likes to write high quality code for high quality projects! </p>
       </div>
-    </header>
+    </div>
   );
 }
 
-export default Header;
+export default Introduction;

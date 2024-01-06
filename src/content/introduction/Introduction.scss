@@ -1,4 +1,4 @@
-.header {
+.introduction {
     padding: 4rem;
     background-color: #1b1a1a;
     color: white;  
@@ -16,7 +16,7 @@
             margin: 0;
         }
 
-        .introduction {
+        .greeting {
             font-size: 20px;
             
             @keyframes fadeIn {
