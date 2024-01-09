@@ -1,6 +1,7 @@
-import { IoHomeSharp } from "react-icons/io5";
+import { IoCodeSlash } from "react-icons/io5";
 import './Header.scss';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
+import useTheme from "../../hooks/useTheme";
 
 type LabelOrElement = string | ReactElement;
 
@@ -23,7 +24,7 @@ function Header() {
         <header id="header" className="header">
             <nav>
                 <a href="#introduction">
-                    <IoHomeSharp />
+                    <IoCodeSlash />
                 </a>
 
                 {headerContent.map((content) => (

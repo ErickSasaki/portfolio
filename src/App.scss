@@ -1,6 +1,10 @@
+@import './theme/Colors.scss';
+
 .app {
     // TODO remove this later, its just for testing scroll
     min-height: 200vh;
+
+    color: var(--app-color-text);
 
     a {
         text-decoration: none;

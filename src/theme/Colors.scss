@@ -1,0 +1,13 @@
+:root {
+    --app-color-text: white;
+    --app-color-subtext: #bbbbbb;
+    --app-color-background: #1b1a1a;
+    --app-divider-color: #3b3636;
+}
+
+body[theme='light'] {
+    --app-color-text: #172b4d;
+    --app-color-subtext: #565766;
+    --app-color-background: #f4f5f7;
+    --app-divider-color: #c9bdbd;
+}
