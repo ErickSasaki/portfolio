@@ -1,8 +1,17 @@
+@import '../../theme/Responsive.scss';
+
 .avatar {
-    height: 350px;
-    width: 350px;
+    --avatar-size: 350px;
+
+    min-width: var(--avatar-size);
+    height: var(--avatar-size);
+    width: var(--avatar-size);
     border-radius: 50%;
     overflow: hidden;
+
+    @include smallDevices() {
+        --avatar-size: 300px;
+    }
 
     @keyframes AvatarAnimation {
         from { opacity: 0; }

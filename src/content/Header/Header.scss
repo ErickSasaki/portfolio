@@ -1,12 +1,15 @@
 .header {
     $horizontal-padding: 20px;
     background-color: #1b1a1a;
-
+    
     position: fixed;
     color: white;
     width: calc(100% - $horizontal-padding * 2);
     height: 50px;
     padding: 0 $horizontal-padding;
+    z-index: 2;
+
+    border-bottom: 1px solid #3b3636;
 
     font-size: 20px;
 

@@ -5,6 +5,7 @@ import { ReactElement } from 'react';
 type LabelOrElement = string | ReactElement;
 
 interface HeaderContent {
+    key: number;
     labelOrElement: LabelOrElement;
     link?: string;
     action?: () => void;
@@ -13,6 +14,7 @@ interface HeaderContent {
 function Header() {
     const headerContent: HeaderContent[] = [
         {
+            key: 0,
             labelOrElement: 'label',
         },
     ];
@@ -25,7 +27,7 @@ function Header() {
                 </a>
 
                 {headerContent.map((content) => (
-                    <a href={content.link}>
+                    <a href={content.link} key={content.key}>
                         {typeof content.labelOrElement === 'string'
                             ? <p> {content.labelOrElement} </p>
                             : <> {content.labelOrElement} </>}

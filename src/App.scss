@@ -1,12 +1,13 @@
-.app {  
-  min-height: 200vh;
+.app {
+    // TODO remove this later, its just for testing scroll
+    min-height: 200vh;
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
