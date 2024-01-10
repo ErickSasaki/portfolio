@@ -1,7 +1,8 @@
 import { IoCodeSlash } from "react-icons/io5";
 import './Header.scss';
-import { ReactElement, useEffect } from 'react';
+import { ReactElement } from 'react';
 import useTheme from "../../hooks/useTheme";
+import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 
 type LabelOrElement = string | ReactElement;
 
@@ -18,6 +19,10 @@ function Header() {
             key: 0,
             labelOrElement: 'label',
         },
+        {
+            key: 1,
+            labelOrElement: <ThemeToggle />
+        },
     ];
 
     return (
@@ -27,13 +32,19 @@ function Header() {
                     <IoCodeSlash />
                 </a>
 
-                {headerContent.map((content) => (
-                    <a href={content.link} key={content.key}>
-                        {typeof content.labelOrElement === 'string'
-                            ? <p> {content.labelOrElement} </p>
-                            : <> {content.labelOrElement} </>}
-                    </a>
-                ))}
+                <div className="content">
+                    {headerContent.map((content) => (
+                        <>
+                            {typeof content.labelOrElement === 'string' ? (
+                                <a href={content.link} key={content.key}>
+                                    <p> {content.labelOrElement} </p>
+                                </a>
+                            ) : (
+                                <> {content.labelOrElement} </>
+                            )}
+                        </>
+                    ))}
+                </div>
             </nav>
         </header>
     )
