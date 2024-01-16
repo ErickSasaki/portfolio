@@ -15,13 +15,13 @@ This is my portfolio, it's still a work in progress.
 
 Node is required to run the app. The app is made using Node v20.11.0.
 
-> Run `npm install` in the project folder to install all the dependencies.
+Run `npm install` in the project folder to install all the dependencies.
 
 ```shell
 npm install
 ```
 
-> Start the project using npm run start, the app will open in localhost:3000
+Start the project using npm run start, the app will open in localhost:3000
 
 ```shell
 npm run start
