@@ -10,6 +10,7 @@ This is my portfolio, it's still a work in progress.
 - Javascript
 - HTML
 - CSS
+- Cypress
 
 ### Instalation
 
@@ -21,7 +22,7 @@ Run `npm install` in the project folder to install all the dependencies.
 npm install
 ```
 
-Start the project using npm run start, the app will open in localhost:3000
+Start the project using `npm run start`, the app will open in localhost:3000
 
 ```shell
 npm run start
@@ -35,14 +36,14 @@ Run the app:
 npm run start
 ```
 
-Run all the tests:
+Tests are implemented using Cypress, to run the tests, the app needs to be running in localhost:3000, react for default run the app in localhost:3000 so running npm run start should be ok. After that just run `npm run test`:
 
 ```shell
 npm run test
 ```
 
-Run the tests and get the coverage:
+Or to see cypress interface run:
 
 ```shell
-npm run test-coverage
+npm run cypress:open
 ```

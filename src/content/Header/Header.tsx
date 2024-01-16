@@ -27,7 +27,7 @@ function Header() {
     return (
         <header id="header" className="header">
             <nav>
-                <a href="#introduction">
+                <a id="home-button" href="#introduction">
                     <IoCodeSlash />
                 </a>
 
