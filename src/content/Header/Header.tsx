@@ -1,7 +1,6 @@
 import { IoCodeSlash } from "react-icons/io5";
 import './Header.scss';
 import { ReactElement } from 'react';
-import useTheme from "../../hooks/useTheme";
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 
 type LabelOrElement = string | ReactElement;
