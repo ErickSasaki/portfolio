@@ -18,11 +18,11 @@ function Introduction() {
       
         <p className='icons animate'>
           <a href="https://github.com/ErickSasaki" target='blank'>
-            <IoLogoGithub />
+            <IoLogoGithub id="github-icon"/>
           </a>
 
           <a href="https://www.linkedin.com/in/erick-batista-da-silva-developer/" target='blank'>
-            <IoLogoLinkedin />
+            <IoLogoLinkedin id="linkedin-icon"/>
           </a>
         </p>
       </div>
