@@ -4,20 +4,16 @@ describe('header', () => {
   });
 
   it('header should be rendered', () => {
-    cy.get('#header');
+    cy.get('#header')
+      .should('be.visible')
   });
 
-  it('home button should scroll to the top of page', () => {
-    cy.scrollTo('bottom')
-      .window()
-      .its('scrollY')
-      .should('not.equal', 0);
-
+  it('home button should navigate to introduction', () => {
     cy.get('#home-button')
-      .click()
-      .window()
-      .its('scrollY')
-      .should('equal', 0);
+      .click();
+
+    cy.get('#introduction');
+    cy.url().should('include', '/#introduction');
   });
 
   it('theme button should toggle themes', () => {
