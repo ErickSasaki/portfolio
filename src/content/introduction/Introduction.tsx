@@ -1,4 +1,5 @@
 import Avatar from '../../components/Avatar/Avatar';
+import Translator from '../../components/Translator/Translator';
 import './Introduction.scss';
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
 
@@ -9,12 +10,14 @@ function Introduction() {
 
       <div className='introduction-wrapper'>
         <p className='greeting animate'>
-          Hi, I'm
+          <Translator id="hi-im" />
         </p>
 
         <p className='personal-name animate'> Erick Batista </p>
 
-        <p className='title animate'> I'm a Front end Developer who likes to write high quality code for high quality projects! </p>
+        <p className='title animate'>
+          <Translator id="introduction" />
+        </p>
       
         <p className='icons animate'>
           <a href="https://github.com/ErickSasaki" target='blank'>
