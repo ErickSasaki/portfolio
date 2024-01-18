@@ -1,15 +1,15 @@
 .header {
     $horizontal-padding: 20px;
-    background-color: var(--app-color-background);
+    background-color: var(--app-background-color);
     
     position: fixed;
-    color: var(--app-color-text);
+    color: var(--app-text-color);
     width: calc(100% - $horizontal-padding * 2);
     height: 50px;
     padding: 0 $horizontal-padding;
     z-index: 2;
 
-    border-bottom: 1px solid var(--app-divider-color);
+    border-bottom: 1px solid var(--app-border-color);
 
     font-size: 20px;
 
