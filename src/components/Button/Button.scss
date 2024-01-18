@@ -1,0 +1,22 @@
+#button {
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--app-background-color);
+    color: var(--app-text-color);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &:focus, &:hover {
+        outline: 2px solid var(--app-border-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span:not(:only-child) {
+        margin-right: 8px;
+    }
+}
