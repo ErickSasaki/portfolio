@@ -9,7 +9,7 @@ interface ButtonProps {
     icon?: ReactNode;
 }
 
-function Dropdown({ onClick, labelId, icon }: ButtonProps) {
+function Button({ onClick, labelId, icon }: ButtonProps) {
     return (
         <button id="button" onClick={onClick}>
             {labelId && <Translator id={labelId} />}
@@ -18,4 +18,4 @@ function Dropdown({ onClick, labelId, icon }: ButtonProps) {
     );
 }
 
-export default Dropdown;
+export default Button;
