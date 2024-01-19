@@ -1,10 +1,10 @@
 import { TranslationIds } from "../../consts/translation";
 import Translator from "../Translator/Translator";
-import { ReactNode } from "react";
+import { ReactNode, MouseEvent } from "react";
 import './Button.scss';
 
 interface ButtonProps {
-    onClick: () => void;
+    onClick: (event: MouseEvent<HTMLButtonElement>) => void;
     labelId?: TranslationIds;
     icon?: ReactNode;
 }

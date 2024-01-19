@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     font-size: 16px;
+    text-wrap: nowrap;
 
     &:focus, &:hover {
         outline: 2px solid var(--app-border-color);
