@@ -1,5 +1,5 @@
 import { TranslationIds } from "../../consts/translation";
-import { ReactNode, useEffect, useState, MouseEvent } from "react";
+import { ReactNode, useEffect, useState, MouseEvent, useRef } from "react";
 import './Dropdown.scss';
 import Button from "../Button/Button";
 
@@ -18,26 +18,38 @@ interface DropdownProps {
 
 function Dropdown({ options, labelId, icon }: DropdownProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const openToLeft = useRef<boolean>(false);
 
     const onDropdownClick = (event: MouseEvent<HTMLButtonElement>) => {
         event.stopPropagation();
+        setDropdownDirection(event);
         setIsOpen((open) => !open);
     }
 
+    const setDropdownDirection = (event: MouseEvent<HTMLButtonElement>) => {
+        const isInRightSideOfScreen = event.pageX / window.innerWidth > 0.5;
+
+        openToLeft.current = isInRightSideOfScreen; 
+    }
+
     useEffect(() => {
+        setCloseDropdownEvent();
+    }, []);
+
+    const setCloseDropdownEvent = () => {
         window.onclick = () => {
             setIsOpen(false);
         };
-    }, []);
+    };
 
     return (
         <div id="dropdown-wrapper">
             <Button onClick={onDropdownClick} labelId={labelId} icon={icon} />
 
             {isOpen && (
-                <div id="dropdown-options">
+                <div id="dropdown-options" className={openToLeft.current ? 'open-left' : ''}>
                     {options.map((option) => (
-                        <Button labelId={option.labelId} onClick={option.onClick} />
+                        <Button key={option.labelId} labelId={option.labelId} onClick={option.onClick} />
                     ))}
                 </div>
             )}
