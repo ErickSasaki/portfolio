@@ -2,11 +2,11 @@ import { IoCodeSlash } from "react-icons/io5";
 import './Header.scss';
 import { ReactElement } from 'react';
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
+import LanguageDropdown from "../../components/LanguageDropdown/LanguageDropdown";
 
 type LabelOrElement = string | ReactElement;
 
 interface HeaderContent {
-    key: number;
     labelOrElement: LabelOrElement;
     link?: string;
     action?: () => void;
@@ -15,11 +15,9 @@ interface HeaderContent {
 function Header() {
     const headerContent: HeaderContent[] = [
         {
-            key: 0,
-            labelOrElement: 'label',
+            labelOrElement: <LanguageDropdown />
         },
         {
-            key: 1,
             labelOrElement: <ThemeToggle />
         },
     ];
@@ -32,16 +30,16 @@ function Header() {
                 </a>
 
                 <div className="content">
-                    {headerContent.map((content) => (
-                        <>
+                    {headerContent.map((content, index) => (
+                        <div key={index}>
                             {typeof content.labelOrElement === 'string' ? (
-                                <a href={content.link} key={content.key}>
+                                <a href={content.link}>
                                     <p> {content.labelOrElement} </p>
                                 </a>
                             ) : (
                                 <> {content.labelOrElement} </>
                             )}
-                        </>
+                        </div>
                     ))}
                 </div>
             </nav>
