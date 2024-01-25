@@ -67,6 +67,14 @@
             margin: 16px 0;
             font-size: 32px;
             @include animateByOrder(4);
+
+            a {
+                transition: transform 0.2s ease-in-out;
+                
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
         }
     }
 

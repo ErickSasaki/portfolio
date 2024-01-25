@@ -9,8 +9,10 @@
     font-size: 16px;
     text-wrap: nowrap;
 
+    transition: background-color 0.25s ease-in-out;
+
     &:focus, &:hover {
-        outline: 2px solid var(--app-border-color);
+        background-color: var(--app-border-color);
     }
 
     &:hover {
