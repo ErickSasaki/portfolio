@@ -21,7 +21,9 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
     const openToLeft = useRef<boolean>(false);
 
     const onDropdownClick = (event: MouseEvent<HTMLButtonElement>) => {
+        // this prevents the window onclick that closes the dropdown to trigger
         event.stopPropagation();
+
         setDropdownDirection(event);
         setIsOpen((open) => !open);
     }
@@ -38,10 +40,6 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
         return cleanCloseDropdownEvent;
     }, []);
 
-    const closeDropdown = () => {
-        setIsOpen(false);
-    }
-
     const setCloseDropdownEvent = () => {
         window.addEventListener('click', closeDropdown);
     };
@@ -49,6 +47,10 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
     const cleanCloseDropdownEvent = () => {
         window.removeEventListener('click', closeDropdown);
     };
+
+    const closeDropdown = () => {
+        setIsOpen(false);
+    }
 
     return (
         <div id="dropdown-wrapper">
