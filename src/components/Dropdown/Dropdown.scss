@@ -1,6 +1,10 @@
 #dropdown-wrapper {
     position: relative;
 
+    #button:focus {
+        background-color: var(--app-hover-background);
+    }
+
     #dropdown-options {
         position: absolute;
         margin-top: 4px;
@@ -8,7 +12,7 @@
         overflow: hidden;
         border: 1px solid var(--app-border-color);
 
-        button {
+        #button {
             padding: 8px 20px;
             border: 0;
             border-radius: 0;
