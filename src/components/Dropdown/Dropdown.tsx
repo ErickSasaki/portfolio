@@ -34,12 +34,20 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
 
     useEffect(() => {
         setCloseDropdownEvent();
+
+        return cleanCloseDropdownEvent;
     }, []);
 
+    const closeDropdown = () => {
+        setIsOpen(false);
+    }
+
     const setCloseDropdownEvent = () => {
-        window.onclick = () => {
-            setIsOpen(false);
-        };
+        window.addEventListener('click', closeDropdown);
+    };
+
+    const cleanCloseDropdownEvent = () => {
+        window.removeEventListener('click', closeDropdown);
     };
 
     return (
