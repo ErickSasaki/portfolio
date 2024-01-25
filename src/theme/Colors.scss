@@ -4,6 +4,7 @@
     --app-subtext-color: #bbbbbb;
     --app-background-color: #1b1a1a;
     --app-border-color: #3b3636;
+    --app-hover-background: #3b3636;
 }
 
 body[theme='light'] {
@@ -11,4 +12,5 @@ body[theme='light'] {
     --app-subtext-color: #565766;
     --app-background-color: #f4f5f7;
     --app-border-color: #c9bdbd;
+    --app-hover-background: #cdcdcd;
 }

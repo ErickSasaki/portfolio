@@ -12,7 +12,7 @@
     transition: background-color 0.25s ease-in-out;
 
     &:focus, &:hover {
-        background-color: var(--app-border-color);
+        background-color: var(--app-hover-background);
     }
 
     &:hover {
