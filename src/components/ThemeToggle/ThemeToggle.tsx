@@ -1,6 +1,7 @@
 import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
 import useTheme from '../../hooks/useTheme';
 import './ThemeToggle.scss';
+import Button from '../Button/Button';
 
 function ThemeToggle() {
     const { changeTheme, theme } = useTheme();
@@ -11,13 +12,10 @@ function ThemeToggle() {
 
     return (
         <div className='theme-toggle'>
-            <button className='icon' onClick={toggleTheme}>
-                {theme === 'dark' ? (
-                    <IoSunnyOutline />
-                ) : (
-                    <IoMoonOutline />
-                )}
-            </button>
+            <Button
+                icon={theme === 'dark' ? <IoSunnyOutline /> : <IoMoonOutline />}
+                onClick={toggleTheme}
+            />
         </div>
     );
 }
