@@ -1,6 +1,12 @@
 describe('header', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('/', {
+      onBeforeLoad(window) {
+        Object.defineProperty(window.navigator, 'language', {
+          value: 'en',
+        });
+      }
+    });
   });
 
   it('header should be rendered', () => {
@@ -28,5 +34,25 @@ describe('header', () => {
 
     cy.get('body')
       .should('have.attr', 'theme', 'dark')
+  });
+
+  it('translate button should translate to specific language', () => {
+    cy.contains('Hi, I\'m');
+
+    cy.get('#dropdown-wrapper')
+      .click();
+
+    cy.contains('portuguese')
+      .click();
+
+    cy.contains('Olá, sou');
+
+    cy.get('#dropdown-wrapper')
+      .click();
+
+    cy.contains('inglês')
+      .click();
+
+    cy.contains('Hi, I\'m');
   });
 })
