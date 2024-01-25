@@ -14,8 +14,8 @@ export const englishTranslations: Translations = {
 }
 
 export const portugueseTranslations: Translations = {
-    'hi-im': 'Olá, me chamo',
-    'introduction': 'Sou um desenvolvedor front end que gosta de escrever bons códigos para bons projetos!',
+    'hi-im': 'Olá, sou',
+    'introduction': 'Um desenvolvedor front end que gosta de escrever bons códigos para bons projetos!',
     'portuguese': "português",
     'english': 'inglês',
 }
