@@ -53,11 +53,11 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
     }
 
     return (
-        <div id="dropdown-wrapper">
+        <div className="dropdown-wrapper">
             <Button onClick={onDropdownClick} labelId={labelId} icon={icon} />
 
             {isOpen && (
-                <div id="dropdown-options" className={openToLeft.current ? 'open-left' : ''}>
+                <div className={`dropdown-options ${openToLeft.current ? 'open-left' : ''}`}>
                     {options.map((option) => (
                         <Button key={option.labelId} labelId={option.labelId} onClick={option.onClick} />
                     ))}

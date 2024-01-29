@@ -5,6 +5,7 @@
     --app-background-color: #1b1a1a;
     --app-border-color: #3b3636;
     --app-hover-background: #3b3636;
+    --app-card-background-color: #3b3636;
 }
 
 body[theme='light'] {
@@ -13,4 +14,5 @@ body[theme='light'] {
     --app-background-color: #f4f5f7;
     --app-border-color: #c9bdbd;
     --app-hover-background: #cdcdcd;
+    --app-card-background-color: #c9bdbd;
 }

@@ -1,0 +1,49 @@
+#skills {
+    h3 {
+        text-align: center;
+    }
+
+    .skill-section-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        .skill-section {
+            padding: 0 20px;
+
+            h3 {
+                margin-top: 3rem;
+            }
+
+            .skill-icons-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 16px;
+        
+                .card {
+                    width: 200px;
+
+                    .skill-card {
+                        max-width: 200px;
+                        display: flex;
+                        align-items: center;
+            
+                        color: var(--app-subtext-color);
+            
+                        svg {
+                            font-size: 48px;
+                        }
+            
+                        p {
+                            font-size: 12px;
+                            margin: 0 0 0 8px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

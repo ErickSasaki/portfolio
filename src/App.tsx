@@ -3,6 +3,7 @@ import Introduction from './content/introduction/Introduction';
 import Header from './content/Header/Header';
 import { Languages, TranslatorContext } from './contexts/TranslatorContext';
 import { useState } from 'react';
+import Skills from './content/Skills/Skills';
 
 function App() {
     const getLanguage = (): Languages => {
@@ -20,8 +21,9 @@ function App() {
     return (
         <TranslatorContext.Provider value={{language, setLanguage}}>
             <div className='app'>
-                <Header></Header>
-                <Introduction></Introduction>
+                <Header />
+                <Introduction />
+                <Skills />
             </div>
         </TranslatorContext.Provider>
     );

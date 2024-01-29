@@ -5,7 +5,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
 
 function Introduction() {
   return (
-    <div id='introduction' className='introduction'>
+    <section id='introduction' className='section'>
       <Avatar></Avatar>
 
       <div className='introduction-wrapper'>
@@ -13,10 +13,14 @@ function Introduction() {
           <Translator id="hi-im" />
         </p>
 
-        <p className='personal-name animate'> Erick Batista </p>
+        <h1 className='personal-name animate'> Erick Batista </h1>
 
         <p className='title animate'>
           <Translator id="introduction" />
+        </p>
+
+        <p className='experience animate'>
+          <Translator id="experience" />
         </p>
       
         <p className='icons animate'>
@@ -29,7 +33,7 @@ function Introduction() {
           </a>
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

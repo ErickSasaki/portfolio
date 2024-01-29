@@ -11,7 +11,7 @@ interface ButtonProps {
 
 function Button({ onClick, labelId, icon }: ButtonProps) {
     return (
-        <button id="button" onClick={onClick}>
+        <button className="button" onClick={onClick}>
             {labelId && <Translator id={labelId} />}
             {icon}
         </button>

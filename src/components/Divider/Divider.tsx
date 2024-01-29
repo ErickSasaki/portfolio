@@ -2,7 +2,7 @@ import './Divider.scss'
 
 function Divider() {
     return (
-        <div id="divider" />
+        <div className="divider" />
     )
 }
 
