@@ -15,13 +15,17 @@
                 margin-top: 3rem;
             }
 
+            &.animate .skill-icons-wrapper .card {
+                animation: SkillCardAnimation 1s;
+                animation-fill-mode: both;
+            }
+
             .skill-icons-wrapper {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 gap: 16px;
-
                 
                 .card {
                     transition: transform 0.25s ease-in-out;
@@ -29,9 +33,6 @@
                     &:hover {
                         transform: scale(1.1);
                     }
-                    
-                    animation: SkillCardAnimation 1s;
-                    animation-fill-mode: both;
 
                     @keyframes SkillCardAnimation {
                         0% {

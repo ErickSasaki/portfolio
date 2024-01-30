@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import Translator from '../../components/Translator/Translator';
 import './Skills.scss';
 import { IoLogoIonic, IoLogoReact, IoLogoSass } from "react-icons/io5";
@@ -46,6 +46,35 @@ function Skills() {
         ],
     };
 
+    useEffect(() => {
+        const observer = createIntersectionObserver();
+        observeSkillSection(observer);
+    }, []);
+
+    const createIntersectionObserver = (): IntersectionObserver => {
+        const observerOptions: IntersectionObserverInit = {
+            threshold: [0.2], 
+        };
+
+        return new IntersectionObserver(animateSkillsOnIntersection, observerOptions);
+    }
+
+    const animateSkillsOnIntersection = (observeEntries: IntersectionObserverEntry[]) => {
+        observeEntries.forEach((entrie) => {
+            if (entrie.isIntersecting) {
+                entrie.target.classList.add('animate');        
+            }
+        });
+    };
+
+    const observeSkillSection = (observer: IntersectionObserver) => {
+        const skillSectionElements = document.querySelectorAll('.skill-section');
+        
+        skillSectionElements.forEach((element) => {
+            observer.observe(element);
+        });
+    };
+
     return (
         <section id="skills" className='section'>
             <h2>
@@ -63,7 +92,7 @@ function Skills() {
                             <div className="skill-icons-wrapper">
                                 {
                                     value.map((skill, index) => (
-                                        <Card style={{ animationDelay: `${index / 4}s` }}>
+                                        <Card key={skill.name} style={{ animationDelay: `${index / 4}s` }}>
                                             <div className="skill-card">
                                                 {skill.icon}
                                                 <p> {skill.name} </p>
