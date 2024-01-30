@@ -1,13 +1,14 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import './Card.scss'
 
 interface CardProps {
     children: ReactNode;
+    style?: CSSProperties;
 }
 
-function Card({ children }: CardProps) {
+function Card({ children, style }: CardProps) {
     return (
-        <div className="card">
+        <div className="card" style={style}>
             {children}
         </div>
     )

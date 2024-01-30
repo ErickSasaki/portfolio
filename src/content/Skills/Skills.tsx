@@ -62,8 +62,8 @@ function Skills() {
 
                             <div className="skill-icons-wrapper">
                                 {
-                                    value.map((skill) => (
-                                        <Card>
+                                    value.map((skill, index) => (
+                                        <Card style={{ animationDelay: `${index / 4}s` }}>
                                             <div className="skill-card">
                                                 {skill.icon}
                                                 <p> {skill.name} </p>

@@ -20,7 +20,7 @@ export const englishTranslations: Translations = {
     'english': 'english',
     'skills': 'Skills',
     'main': 'Main',
-    'tests': 'Test',
+    'tests': 'Tests',
     'base': 'Base',
     'others': 'Others',
 };

@@ -22,23 +22,50 @@
                 flex-direction: column;
                 gap: 16px;
 
-                .skill-card {
-                    width: 200px;
-                    height: 48px;
-                    max-width: 200px;
-                    display: flex;
-                    align-items: center;
+                
+                .card {
+                    transition: transform 0.25s ease-in-out;
+                    
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    
+                    animation: SkillCardAnimation 1s;
+                    animation-fill-mode: both;
 
-                    color: var(--app-text-color);
-
-                    svg {
-                        width: 48px;
-                        font-size: 40px;
+                    @keyframes SkillCardAnimation {
+                        0% {
+                            opacity: 0;
+                            scale: (1);
+                        }
+                        50% {
+                            opacity: 0.5;
+                            scale: (1.1);
+                        }
+                        100% {
+                            opacity: 1;
+                            scale: (1);
+                        }
                     }
 
-                    p {
-                        font-size: 16px;
-                        margin: 0 0 0 8px;
+                    .skill-card {
+                        width: 200px;
+                        height: 48px;
+                        max-width: 200px;
+                        display: flex;
+                        align-items: center;
+
+                        color: var(--app-text-color);
+
+                        svg {
+                            width: 48px;
+                            font-size: 40px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            margin: 0 0 0 8px;
+                        }
                     }
                 }
             }
