@@ -7,7 +7,7 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        
+
         .skill-section {
             padding: 0 20px;
 
@@ -21,28 +21,26 @@
                 align-items: center;
                 flex-direction: column;
                 gap: 16px;
-        
-                .card {
-                    width: 200px;
 
-                    .skill-card {
-                        max-width: 200px;
-                        display: flex;
-                        align-items: center;
-            
-                        color: var(--app-subtext-color);
-            
-                        svg {
-                            font-size: 48px;
-                        }
-            
-                        p {
-                            font-size: 12px;
-                            margin: 0 0 0 8px;
-                        }
+                .skill-card {
+                    width: 200px;
+                    height: 48px;
+                    max-width: 200px;
+                    display: flex;
+                    align-items: center;
+
+                    color: var(--app-text-color);
+
+                    svg {
+                        width: 48px;
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin: 0 0 0 8px;
                     }
                 }
-
             }
         }
     }
