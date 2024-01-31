@@ -6,19 +6,28 @@ import LanguageDropdown from "../../components/LanguageDropdown/LanguageDropdown
 
 type LabelOrElement = string | ReactElement;
 
-interface HeaderContent {
-    labelOrElement: LabelOrElement;
-    link?: string;
-    action?: () => void;
+interface HeaderLinks {
+    label: LabelOrElement;
+    link: string;
 }
 
 function Header() {
-    const headerContent: HeaderContent[] = [
+    const headerLinks: HeaderLinks[] = [
         {
-            labelOrElement: <LanguageDropdown />
+            label: 'Introduction',
+            link: '#introduction',
         },
         {
-            labelOrElement: <ThemeToggle />
+            label: 'Skills',
+            link: '#skills',
+        },
+        {
+            label: 'Projects',
+            link: '#projects',
+        },
+        {
+            label: 'Contact',
+            link: '#contact',
         },
     ];
 
@@ -29,20 +38,21 @@ function Header() {
                     <IoCodeSlash />
                 </a>
 
-                <div className="content">
-                    {headerContent.map((content, index) => (
-                        <div key={index}>
-                            {typeof content.labelOrElement === 'string' ? (
-                                <a href={content.link}>
-                                    <p> {content.labelOrElement} </p>
-                                </a>
-                            ) : (
-                                <> {content.labelOrElement} </>
-                            )}
-                        </div>
-                    ))}
+                <div className="nav-content">
+                    {
+                        headerLinks.map((headerLink) => (
+                            <a href={headerLink.link}>
+                                <p>{headerLink.label} </p>
+
+                                <div className="animated-border"/>
+                            </a>
+                        ))
+                    }
                 </div>
             </nav>
+
+            <LanguageDropdown />
+            <ThemeToggle />
         </header>
     )
 }
