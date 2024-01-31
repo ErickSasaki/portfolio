@@ -3,7 +3,7 @@ import { ReactNode, useEffect, useState, MouseEvent, useRef } from "react";
 import './Dropdown.scss';
 import Button from "../Button/Button";
 
-interface DropdownOption {
+export interface DropdownOption {
     labelId: TranslationIds;
     onClick: () => void;
 }
@@ -14,9 +14,10 @@ interface DropdownProps {
     options: DropdownOptions;
     labelId?: TranslationIds;
     icon?: ReactNode;
+    className?: string;
 }
 
-function Dropdown({ options, labelId, icon }: DropdownProps) {
+function Dropdown({ options, labelId, icon, className }: DropdownProps) {
     const [isOpen, setIsOpen] = useState(false);
     const openToLeft = useRef<boolean>(false);
 
@@ -53,7 +54,7 @@ function Dropdown({ options, labelId, icon }: DropdownProps) {
     }
 
     return (
-        <div className="dropdown-wrapper">
+        <div className={`dropdown-wrapper ${className}`}>
             <Button onClick={onDropdownClick} labelId={labelId} icon={icon} />
 
             {isOpen && (

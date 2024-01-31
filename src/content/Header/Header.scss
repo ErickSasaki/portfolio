@@ -79,4 +79,13 @@
     .theme-toggle {
         margin-left: 8px;
     }
+
+    .mobile-menu {
+        display: none;
+        margin-left: 8px;
+
+        @include smallDevices() {
+            display: block;
+        }
+    }
 }

@@ -15,7 +15,7 @@ function LanguageDropdown() {
         { labelId: 'portuguese', onClick: () => changeLanguage('pt') },
     ];
 
-    return <Dropdown icon={<IoLanguage />} options={options}/>
+    return <Dropdown className="language-dropdown" icon={<IoLanguage />} options={options}/>
 }
 
 export default LanguageDropdown;

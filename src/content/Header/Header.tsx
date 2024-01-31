@@ -1,9 +1,11 @@
-import { IoCodeSlash } from "react-icons/io5";
+import { IoCodeSlash, IoMenu } from "react-icons/io5";
 import './Header.scss';
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import LanguageDropdown from "../../components/LanguageDropdown/LanguageDropdown";
 import Translator from "../../components/Translator/Translator";
 import { TranslationIds } from "../../consts/translation";
+import Dropdown, { DropdownOption, DropdownOptions } from "../../components/Dropdown/Dropdown";
+import { useMemo } from "react";
 
 interface HeaderLinks {
     labelId: TranslationIds;
@@ -11,7 +13,7 @@ interface HeaderLinks {
 }
 
 function Header() {
-    const headerLinks: HeaderLinks[] = [
+    const headerLinks: HeaderLinks[] = useMemo(() => [
         {
             labelId: 'introduction',
             link: '#introduction',
@@ -20,15 +22,27 @@ function Header() {
             labelId: 'skills',
             link: '#skills',
         },
-        {
-            labelId: 'projects',
-            link: '#projects',
-        },
-        {
-            labelId: 'contact',
-            link: '#contact',
-        },
-    ];
+        // TODO: uncomment when the respective content is created
+        // {
+        //     labelId: 'projects',
+        //     link: '#projects',
+        // },
+        // {
+        //     labelId: 'contact',
+        //     link: '#contact',
+        // },
+    ], []);
+
+    const mobileMenuOptions: DropdownOptions = useMemo(() => (
+        headerLinks.map((headerLink): DropdownOption => ({
+            labelId: headerLink.labelId,
+            onClick: () => navigateToSection(headerLink.link),
+        }))
+    ), [headerLinks]);
+
+    const navigateToSection = (elementId: string) => {
+        window.location.href = elementId;
+    }
 
     return (
         <header id="header" className="header">
@@ -42,10 +56,10 @@ function Header() {
                         headerLinks.map((headerLink) => (
                             <a href={headerLink.link}>
                                 <p>
-                                    <Translator id={headerLink.labelId}/>
+                                    <Translator id={headerLink.labelId} />
                                 </p>
 
-                                <div className="animated-border"/>
+                                <div className="animated-border" />
                             </a>
                         ))
                     }
@@ -54,6 +68,7 @@ function Header() {
 
             <LanguageDropdown />
             <ThemeToggle />
+            <Dropdown className="mobile-menu" options={mobileMenuOptions} icon={<IoMenu />} />
         </header>
     )
 }
