@@ -1,11 +1,10 @@
 @import '../../theme/Responsive.scss';
 
 #introduction {
-    min-height: 50vh;
+    min-height: 60vh;
     max-width: 100vw;
     display: flex;
     align-items: center;
-    padding-top: 6rem;
 
     .introduction-wrapper {
         $animation-time: 0.25s;
@@ -89,7 +88,6 @@
             flex-direction: column;
             align-items: center;
             padding: 2rem;
-            padding-top: 6rem;
         }
     
         .introduction-wrapper {
@@ -106,10 +104,6 @@
     }
 
     @include smallDevices() {
-        & {
-            padding-top: 4rem;
-        }
-
         .introduction-wrapper {
             margin-left: 0.5rem;
         }

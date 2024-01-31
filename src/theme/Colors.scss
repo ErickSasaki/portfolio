@@ -6,6 +6,8 @@
     --app-border-color: #3b3636;
     --app-hover-background: #3b3636;
     --app-card-background-color: #3b3636;
+    --app-scrollbar-thumb-color: #3b3636;
+    --app-scrollbar-track-color: #292525;
 }
 
 body[theme='light'] {
@@ -15,4 +17,6 @@ body[theme='light'] {
     --app-border-color: #c9bdbd;
     --app-hover-background: #cdcdcd;
     --app-card-background-color: #e9e0e0;
+    --app-scrollbar-thumb-color: #c9bdbd;
+    --app-scrollbar-track-color: #e9e0e0;
 }

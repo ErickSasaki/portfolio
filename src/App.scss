@@ -1,7 +1,33 @@
 @import './theme/Colors.scss';
 @import './theme/Responsive.scss';
 
+$header-height: 50px;
+
 .app {
+    height: 100vh;
+    overflow: hidden;
+
+    .content {
+        height: calc(100% - $header-height);
+        overflow: auto;
+        scroll-behavior: smooth;
+        margin-top: $header-height;
+        
+        &::-webkit-scrollbar {
+            width: 12px;
+            padding: 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--app-scrollbar-track-color);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--app-scrollbar-thumb-color);
+            border-radius: 8px;
+        }
+    }
+
     background-color: var(--app-background-color);
     color: var(--app-text-color);
 
@@ -17,17 +43,13 @@
     }
 
     .section {
-        padding: 4rem;
+        padding: $header-height 4rem;
         
         @include largeDevices() {
             & {
-                padding: 2rem;
+                padding: $header-height 2rem;
             }
         }
     }
 
-}
-
-html {
-    scroll-behavior: smooth;
 }

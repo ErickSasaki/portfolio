@@ -22,8 +22,11 @@ function App() {
         <TranslatorContext.Provider value={{language, setLanguage}}>
             <div className='app'>
                 <Header />
-                <Introduction />
-                <Skills />
+
+                <div className="content">
+                    <Introduction />
+                    <Skills />
+                </div>
             </div>
         </TranslatorContext.Provider>
     );
