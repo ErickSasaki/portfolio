@@ -1,32 +1,31 @@
 import { IoCodeSlash } from "react-icons/io5";
 import './Header.scss';
-import { ReactElement } from 'react';
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import LanguageDropdown from "../../components/LanguageDropdown/LanguageDropdown";
-
-type LabelOrElement = string | ReactElement;
+import Translator from "../../components/Translator/Translator";
+import { TranslationIds } from "../../consts/translation";
 
 interface HeaderLinks {
-    label: LabelOrElement;
+    labelId: TranslationIds;
     link: string;
 }
 
 function Header() {
     const headerLinks: HeaderLinks[] = [
         {
-            label: 'Introduction',
+            labelId: 'introduction',
             link: '#introduction',
         },
         {
-            label: 'Skills',
+            labelId: 'skills',
             link: '#skills',
         },
         {
-            label: 'Projects',
+            labelId: 'projects',
             link: '#projects',
         },
         {
-            label: 'Contact',
+            labelId: 'contact',
             link: '#contact',
         },
     ];
@@ -42,7 +41,9 @@ function Header() {
                     {
                         headerLinks.map((headerLink) => (
                             <a href={headerLink.link}>
-                                <p>{headerLink.label} </p>
+                                <p>
+                                    <Translator id={headerLink.labelId}/>
+                                </p>
 
                                 <div className="animated-border"/>
                             </a>

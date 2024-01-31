@@ -16,7 +16,7 @@ function Introduction() {
         <h1 className='personal-name animate'> Erick Batista </h1>
 
         <p className='title animate'>
-          <Translator id="introduction" />
+          <Translator id="introduction-text" />
         </p>
 
         <p className='experience animate'>
