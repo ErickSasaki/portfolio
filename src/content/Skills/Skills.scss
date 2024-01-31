@@ -1,9 +1,15 @@
 #skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h3 {
         text-align: center;
     }
 
     .skill-section-wrapper {
+        width: 100%;
+        max-width: 1200px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
