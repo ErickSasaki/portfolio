@@ -39,7 +39,7 @@ describe('header', () => {
   it('translate button should translate to specific language', () => {
     cy.contains('Hi, I\'m');
 
-    cy.get('#dropdown-wrapper')
+    cy.get('.dropdown-wrapper')
       .click();
 
     cy.contains('portuguese')
@@ -47,7 +47,7 @@ describe('header', () => {
 
     cy.contains('Olá, sou');
 
-    cy.get('#dropdown-wrapper')
+    cy.get('.dropdown-wrapper')
       .click();
 
     cy.contains('inglês')
