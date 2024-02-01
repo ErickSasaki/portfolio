@@ -1,5 +1,5 @@
 import './App.scss';
-import Introduction from './content/introduction/Introduction';
+import Introduction from './content/Introduction/Introduction';
 import Header from './content/Header/Header';
 import { Languages, TranslatorContext } from './contexts/TranslatorContext';
 import { useState } from 'react';
