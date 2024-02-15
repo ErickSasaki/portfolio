@@ -12,6 +12,7 @@ export type TranslationIds =
     'base' |
     'tests' |
     'others' |
-    'portfolio-description';
+    'portfolio-description' |
+    'contact-description';
 
 export type Translations = Record<TranslationIds, string>;

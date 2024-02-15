@@ -15,4 +15,5 @@ export const portugueseTranslations: Translations = {
     'base': 'Base',
     'others': 'Outros',
     'portfolio-description': 'Você está nele! Eu fiz esse portfolio com o objetivo de mostrar meus projetos pessoais futuros e mostrar um pouco das minhas skills, o portfolio tem temas, traduções, é responsivo e tem animações css. O código está bem organizado também, você pode ver melhor no meu github clicando no icone abaixo.',
+    'contact-description': 'Quer conversar sobre trabalho ou tecnologia? Você pode me chamar por aqui:',
 };

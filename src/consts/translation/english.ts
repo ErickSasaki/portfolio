@@ -15,4 +15,5 @@ export const englishTranslations: Translations = {
     'base': 'Base',
     'others': 'Others',
     'portfolio-description': 'You are here! I made this portfolio to show my future projects and show some of my skills in web development, this have themes, translations, its responsive and have css animations. The code is also very organized, you can see it on my github in the icon below.',
+    'contact-description': 'Wanna talk about job or technology? You can contact me in this places:',
 };

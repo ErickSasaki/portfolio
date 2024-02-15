@@ -26,11 +26,10 @@ function Header() {
             labelId: 'projects',
             link: '#projects',
         },
-        // TODO: uncomment when the respective content is created
-        // {
-        //     labelId: 'contact',
-        //     link: '#contact',
-        // },
+        {
+            labelId: 'contact',
+            link: '#contact',
+        },
     ], []);
 
     const mobileMenuOptions: DropdownOptions = useMemo(() => (

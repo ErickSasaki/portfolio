@@ -46,7 +46,7 @@ function ProjectCard({ name, image, skills, descriptionId, github }: ProjectCard
 
                     <div className="links">
                         <a className="github-link" href={github} target='blank'>
-                            <IoLogoGithub id="github-icon" />
+                            <IoLogoGithub />
                         </a>
                     </div>
                 </div>

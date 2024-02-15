@@ -5,6 +5,7 @@ import { Languages, TranslatorContext } from './contexts/TranslatorContext';
 import { useState } from 'react';
 import Skills from './content/Skills/Skills';
 import Projects from './content/Projects/Projects';
+import Contact from './content/Contact/Contact';
 
 function App() {
     const getLanguage = (): Languages => {
@@ -28,6 +29,7 @@ function App() {
                     <Introduction />
                     <Skills />
                     <Projects />
+                    <Contact />
                 </div>
             </div>
         </TranslatorContext.Provider>
