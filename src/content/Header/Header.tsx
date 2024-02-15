@@ -3,14 +3,14 @@ import './Header.scss';
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import LanguageDropdown from "../../components/LanguageDropdown/LanguageDropdown";
 import Translator from "../../components/Translator/Translator";
-import { TranslationIds } from "../../consts/translation";
+import { TranslationIds } from "../../consts/translation/ids";
 import Dropdown, { DropdownOption, DropdownOptions } from "../../components/Dropdown/Dropdown";
 import { useMemo } from "react";
 
 interface HeaderLinks {
     labelId: TranslationIds;
     link: string;
-}
+} 
 
 function Header() {
     const headerLinks: HeaderLinks[] = useMemo(() => [
@@ -22,11 +22,11 @@ function Header() {
             labelId: 'skills',
             link: '#skills',
         },
+        {
+            labelId: 'projects',
+            link: '#projects',
+        },
         // TODO: uncomment when the respective content is created
-        // {
-        //     labelId: 'projects',
-        //     link: '#projects',
-        // },
         // {
         //     labelId: 'contact',
         //     link: '#contact',

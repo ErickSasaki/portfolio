@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Languages, TranslatorContext } from "../../contexts/TranslatorContext";
-import { TranslationIds, Translations, englishTranslations, portugueseTranslations } from "../../consts/translation";
+import { TranslationIds, Translations } from "../../consts/translation/ids";
+import { englishTranslations } from "../../consts/translation/english";
+import { portugueseTranslations } from "../../consts/translation/portuguese";
 
 interface TranslatorProps {
     id: TranslationIds;

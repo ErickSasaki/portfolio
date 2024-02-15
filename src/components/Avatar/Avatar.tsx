@@ -1,5 +1,5 @@
 import './Avatar.scss';
-import profilePicture from './../../assets/profile-picture.jpg';
+import profilePicture from './../../assets/image/profile-picture.jpg';
 
 function Avatar() {
     return (

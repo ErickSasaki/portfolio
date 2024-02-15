@@ -2,7 +2,7 @@ import { ReactNode, useEffect } from 'react';
 import Translator from '../../components/Translator/Translator';
 import './Skills.scss';
 import { IoLogoIonic, IoLogoReact, IoLogoSass } from "react-icons/io5";
-import { TranslationIds } from '../../consts/translation';
+import { TranslationIds } from '../../consts/translation/ids';
 import Card from '../../components/Card/Card';
 import AngularIcon from '../../assets/icons/AngularIcon';
 import Html5Icon from '../../assets/icons/Html5Icon';
@@ -19,7 +19,9 @@ interface SkillInfo {
     icon: ReactNode;
 };
 
-type SkillList = Partial<Record<TranslationIds, SkillInfo[]>>;
+type SkillColumns = Extract<TranslationIds, 'main' | 'base' | 'tests' | 'others'>;
+
+type SkillList = Partial<Record<SkillColumns, SkillInfo[]>>;
 
 function Skills() {
     const skillList: SkillList = {

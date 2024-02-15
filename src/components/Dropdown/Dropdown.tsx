@@ -1,4 +1,4 @@
-import { TranslationIds } from "../../consts/translation";
+import { TranslationIds } from "../../consts/translation/ids";
 import { ReactNode, useEffect, useState, MouseEvent, useRef } from "react";
 import './Dropdown.scss';
 import Button from "../Button/Button";

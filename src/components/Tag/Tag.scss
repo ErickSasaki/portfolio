@@ -1,0 +1,12 @@
+.tag {
+    width: fit-content;
+    padding: 4px;
+    border: 1px solid var(--app-text-color);
+    border-radius: 16px;
+    display: flex;
+
+    p {
+        font-size: 14px;
+        margin: 2px;
+    }
+}
